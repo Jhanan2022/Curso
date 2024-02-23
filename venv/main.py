@@ -1,7 +1,7 @@
 # Permitir la ejecucion de scripts: Set-ExecutionPolicy RemoteSigned -Scope Process
-# correr la app uvicorn --host 0.0.0.0 main:app --reload --port 5000
+# correr la app uvicorn main:app --reload --port 5000
 from typing import Union
-from fastapi import FastAPI
+from Lib import FastAPI
 
 app = FastAPI()
 
