@@ -1,7 +1,7 @@
 # Permitir la ejecucion de scripts: Set-ExecutionPolicy RemoteSigned -Scope Process
 # correr la app uvicorn main:app --reload --port 5000
 from typing import Union
-from Lib import FastAPI
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -11,4 +11,4 @@ def read_root():
 
 @app.get('/hola')
 def hola_mundo():
-    return {'Hola':'Mundo!'}
+    return {'Hola':'Mundo! 2'}
