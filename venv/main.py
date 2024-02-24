@@ -2,6 +2,7 @@
 # correr la app uvicorn main:app --reload --port 5000
 from typing import Union
 from fastapi import FastAPI
+from models.item_model import Item
 from pydantic import BaseModel
 
 app = FastAPI()
