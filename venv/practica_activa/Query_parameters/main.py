@@ -1,4 +1,5 @@
 """
+para commit mas rapidos, Ctrl + S x2, 
 #Query parameters modificado haciendo pasos
 from fastapi import FastAPI
 
