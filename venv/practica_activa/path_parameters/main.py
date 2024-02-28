@@ -30,6 +30,7 @@ async def read_user_me():
 async def read_user(user_id: str):
     return{"user_id": user_id}
 """
+""" #Parametros de ruta enumerados
 from enum import Enum
 
 from fastapi import FastAPI
@@ -53,3 +54,14 @@ async def get_model(model_name: ModelName):
         return {"model_name": model_name, "message": "LeCNN all the images"}
 
     return {"model_name": model_name, "message": "Have some residuals"}
+"""
+"""#Parametro de ruta con una ruta en el parametro
+"""
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/files/{file_path:path}")
+async def read_file(file_path: str):
+    return {"file_path": file_path}
