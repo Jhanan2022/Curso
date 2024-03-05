@@ -75,7 +75,6 @@ async def read_user_item(user_id: int, item_id: str, q: str | None = None, short
 """
 """
 #Required query parameters
-"""
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -84,4 +83,14 @@ app = FastAPI()
 @app.get("/items/{item_id}")
 async def read_user_item(item_id: str, needy: str):
     item = {"item_id": item_id, "needy": needy}
+    return item
+""" #Required optional default
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/items/{item_id}")
+async def read_user_item(item_id: str, needy: str, skip: int = 0, limit: int | None = None):
+    item = {"item_id": item_id, "needy": needy, "skip":skip,"limit":limit}
     return item
